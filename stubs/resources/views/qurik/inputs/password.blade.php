@@ -1,34 +1,12 @@
-@props([
-    'model' => null,
-    'lable' => __('auth.password_label'),
-    'placeholder' => null,
-    'text' => 'text-white',
-    'border' => 'border-slate-300',
-    'bg' => 'bg-transparent/10'
-])
+@props(['icon' => null])
 
-@if ($placeholder)
-    @php($attributes = $attributes->merge(['placeholder' => $placeholder]) )
-@endif
+<div x-data="{open:false}" class="input input-bordered flex items-center gap-x-2">
 
-<div class="w-full flex flex-col gap-y-2 mt-4 {{$text}}">
-    <label for="email">{{$lable}}</label>
-    <div x-data="{ open: false }" class="w-full relative">
+    @if ($icon)
+        <span class="{{$icon}} text-xl"></span>
+    @endif
 
-        <span
-            class="iconify solar--lock-keyhole-minimalistic-bold text-2xl absolute top-1/2 left-6 -translate-x-1/2 -translate-y-1/2"></span>
+    <input :type="open ? 'text':'password'" type="password" class="grow">
 
-        <input {{$attributes}} wire:model="{{$model}}"
-            class="w-full py-3 px-12 rounded-xl outline-none border @error($model) bg-error/10 border-error text-error @else {{$bg}} {{$border}} @enderror"
-            :type="open ? 'text' : 'password'" name="password">
-
-        <span @click="open = !open"
-            :class="open ? 'iconify solar--eye-bold' : 'iconify solar--eye-closed-bold'"
-            class="text-2xl absolute top-1/2 right-0 -translate-x-1/2 -translate-y-1/2"></span>
-
-    </div>
-
-    @error($model)
-        <p class="text-error w-full text-left">{{$message}}</p>
-    @enderror
+    <span @click="open = !open" :class="open ? 'solar--eye-bold':'solar--eye-closed-bold'" class="iconify text-xl"></span>
 </div>
