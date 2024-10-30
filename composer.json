@@ -1,0 +1,28 @@
+{
+    "name": "end3rman/qurik",
+    "description": "Qurik Ui Simple & Free",
+    "type": "library",
+    "require": {
+        "livewire/livewire": "^3.5"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "End3rman\\Qurik\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "End3rman\\Qurik\\QurikServiceProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "end3r-man",
+            "email": "praveen.venkatachalam@proton.me"
+        }
+    ],
+    "minimum-stability": "stable"
+}
