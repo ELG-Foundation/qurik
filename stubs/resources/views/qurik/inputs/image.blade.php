@@ -2,12 +2,9 @@
     'model' => null,
 ])
 
-<div x-data="HandleFile('{{ $model }}')"
-    @drag.prevent="handleFileDrop"
-    @dragover.prevent="isDroppingFile = true"
-    @dragleave.prevent="isDroppingFile = false"
-    @drop="isDroppingFile = false"
-    :class="temurl ? 'border-success':'border-base-300'"
+<div x-data="HandleFile('{{ $model }}')" @drag.prevent="handleFileDrop" @dragover.prevent="isDroppingFile = true"
+    @dragleave.prevent="isDroppingFile = false" @drop="isDroppingFile = false"
+    :class="temurl ? 'border-success' : 'border-base-300'"
     class="w-full h-48 border-2 border-dashed @error($model) border-error @else border-base-300 @enderror rounded-xl relative">
 
     <div x-show="!temurl" class="size-full center flex-col py-3 px-4 ">
@@ -28,7 +25,7 @@
     </div>
 
     <input @change="handleFileSelect" class="size-full absolute top-0 left-0 opacity-0 z-10" type="file"
-            name="userImage" accept="image/*" />
+        name="userImage" accept="image/*" />
 </div>
 
 @push('js')
