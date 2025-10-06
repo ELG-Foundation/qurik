@@ -1,29 +1,34 @@
 {
-    "name": "end3rman/qurik",
-    "description": "Qurik Ui Simple & Free",
-    "type": "library",
-    "require": {
-        "livewire/livewire": "^3.5",
-        "laravel/framework": "^11.33"
-    },
-    "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "End3rman\\Qurik\\": "src/"
-        }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "End3rman\\Qurik\\QurikServiceProvider"
-            ]
-        }
-    },
-    "authors": [
-        {
-            "name": "end3r-man",
-            "email": "praveen.venkatachalam@proton.me"
-        }
-    ],
-    "minimum-stability": "stable"
+  "name": "end3rman/qurik",
+  "description": "Qurik Ui Simple & Free",
+  "type": "library",
+  "require": {
+    "php": "^8.1",
+    "illuminate/console": "^10.0|^11.0|^12.0",
+    "illuminate/support": "^10.0|^11.0|^12.0",
+    "illuminate/view": "^10.0|^11.0|^12.0",
+    "symfony/console": "^6.0|^7.0",
+    "livewire/livewire": "^3.5.19",
+    "laravel/prompts": "^0.1|^0.2|^0.3"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "End3rman\\Qurik\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "End3rman\\Qurik\\QurikServiceProvider"
+      ]
+    }
+  },
+  "authors": [
+    {
+      "name": "end3r-man",
+      "email": "praveen.venkatachalam@proton.me"
+    }
+  ],
+  "minimum-stability": "stable"
 }
