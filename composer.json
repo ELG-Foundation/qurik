@@ -3,7 +3,8 @@
     "description": "Qurik Ui Simple & Free",
     "type": "library",
     "require": {
-        "livewire/livewire": "^3.5"
+        "livewire/livewire": "^3.5",
+        "laravel/framework": "^11.33"
     },
     "license": "MIT",
     "autoload": {

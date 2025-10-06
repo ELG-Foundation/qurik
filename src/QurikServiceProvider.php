@@ -2,7 +2,6 @@
 
 namespace End3rman\Qurik;
 
-use End3rman\Qurik\QurikTagCompiler;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 
@@ -43,5 +42,4 @@ class QurikServiceProvider extends ServiceProvider
 
         Blade::anonymousComponentPath(__DIR__.'/../stubs/resources/views/qurik', 'qurik');
     }
-
 }
